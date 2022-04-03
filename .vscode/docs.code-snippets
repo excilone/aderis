@@ -1,0 +1,30 @@
+{
+	"Property snippet for documentation": {
+		"prefix": "prop",
+		"body": ["``", "> <br> **type** "],
+		"description": "A property for documentation"
+	},
+	"Method snippet for documentation": {
+		"prefix": "method",
+		"body": [
+			"### name()",
+			"",
+			"> ",
+			"> | Parameter | Description |",
+			"> |-----------|-------------|",
+			"> |  |  |"
+		],
+		"description": "Method snippet for documentation"
+	},
+	"Constructor snippet for documentation": {
+		"prefix": "cons",
+		"body": [
+			"## Constructor",
+			"",
+			"`new name()`",
+			"> | Parameter | Default | Description |",
+			"> |-----------|---------|-------------|"
+		],
+		"description": "Constructor snippet for documentation"
+	}
+}

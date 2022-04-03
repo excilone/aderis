@@ -1,0 +1,84 @@
+{
+	"env": {
+		"node": true,
+		"commonjs": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"prettier",
+		"plugin:import/recommended"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": 13,
+		"project": "./tsconfig.json"
+	},
+	"plugins": ["@typescript-eslint", "import"],
+	"rules": {
+		"linebreak-style": ["warn", "unix"],
+		"quotes": "off",
+		"@typescript-eslint/quotes": [
+			"warn",
+			"single",
+			{
+				"avoidEscape": true
+			}
+		],
+		"semi": "off",
+		"@typescript-eslint/semi": ["warn", "always"],
+		"no-tabs": "off",
+		"no-console": "error",
+		"max-classes-per-file": ["error", 3],
+		"no-invalid-regexp": "error",
+		"no-this-before-super": "error",
+		"no-unused-vars": "off",
+		"@typescript-eslint/no-unused-vars": "warn",
+		"no-empty-function": "off",
+		"@typescript-eslint/no-empty-function": "warn",
+		"@typescript-eslint/no-empty-interface": "warn",
+		"no-extra-semi": "off",
+		"@typescript-eslint/no-extra-semi": "error",
+		"@typescript-eslint/prefer-for-of": "warn",
+		"no-case-declarations": "off",
+		"@typescript-eslint/prefer-return-this-type": "warn",
+		"@typescript-eslint/strict-boolean-expressions": [
+			"error",
+			{
+				"allowNullableObject": false,
+				"allowString": false,
+				"allowNumber": false
+			}
+		],
+		"no-extra-boolean-cast": "off",
+		"@typescript-eslint/array-type": "error",
+		"no-empty": "warn",
+		"prefer-arrow-callback": "error",
+		"no-restricted-imports": "off",
+		"@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
+		"no-duplicate-imports": "off",
+		"@typescript-eslint/no-duplicate-imports": "error",
+		"no-extra-parens": "off",
+		"@typescript-eslint/no-floating-promises": "error",
+		"@typescript-eslint/no-unused-expressions": "warn",
+		"no-unused-private-class-members": "warn",
+		"no-unused-labels": "warn",
+		"no-new-wrappers": "error",
+		"no-unneeded-ternary": "error",
+		"prefer-const": "warn",
+		"@typescript-eslint/require-await": "error",
+		"import/no-self-import": "error",
+		"import/no-useless-path-segments": "warn",
+		"import/no-unresolved": "off",
+		"no-dupe-class-members": "off",
+		"@typescript-eslint/no-dupe-class-members": "error",
+		"class-methods-use-this": "warn",
+		"@typescript-eslint/no-non-null-assertion": "off",
+		"@typescript-eslint/consistent-type-imports": [
+			"warn",
+			{
+				"disallowTypeAnnotations": false
+			}
+		]
+	}
+}

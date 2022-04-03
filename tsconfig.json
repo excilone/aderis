@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"lib": ["ESNext"],
+		"outDir": "dist",
+		"strict": true,
+		"noImplicitAny": true,
+		"module": "CommonJS",
+		"moduleResolution": "Node",
+		"target": "ESNext",
+		"alwaysStrict": true,
+		"allowSyntheticDefaultImports": true,
+		"strictNullChecks": true
+	},
+	"include": ["./src", "index.d.ts"],
+	"exclude": ["node_modules"]
+}
