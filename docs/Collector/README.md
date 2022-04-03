@@ -17,6 +17,7 @@ Collect messages and component interactions.
 > | options.timeout | [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) (optional)<br>Collector duration in milliseconds.
 > | options.idle | [Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) (optional)<br>Whether the collector timeout will be restarted after saving an element |
 > | options.max | [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) (optional)<br>The limit of objects in the collector |
+
 > Returns [Collector](Collector.md)<'messageCreate'>
 
 ## client.createChannelMessageCollector(channelID, options)
@@ -33,6 +34,7 @@ Collect messages and component interactions.
 > | options.timeout | [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) (optional)<br>Collector duration in milliseconds.
 > | options.idle | [Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) (optional)<br>Whether the collector timeout will be restarted after saving an element |
 > | options.max | [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) (optional)<br>The limit of objects in the collector |
+
 > Returns [Collector](Collector.md)<'messageCreate'>
 
 ## message.createComponentCollector(options)
@@ -48,4 +50,5 @@ Collect messages and component interactions.
 > | options.timeout | [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) (optional)<br>Collector duration in milliseconds.
 > | options.idle | [Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) (optional)<br>Whether the collector timeout will be restarted after saving an element |
 > | options.max | [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) (optional)<br>The limit of objects in the collector |
+
 > Returns [Collector](Collector.md)<'interactionCreate'>

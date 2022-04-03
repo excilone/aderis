@@ -21,7 +21,7 @@ require('@excilone/aderis')(require('eris'));
 Or with ESM:
 
 ```js
-import '@excilone/aderis/config';
+import '@excilone/aderis/dist/config';
 ```
 
 ## Implementations

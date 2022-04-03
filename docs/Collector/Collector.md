@@ -50,6 +50,7 @@ Collector class for limited event use
 > | Parameter | Description |
 > |-----------|-------------|
 > | args | [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)[]<br>The arguments of the event |
+
 > Returns [Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) | [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)>
 
 ### onEnd?(reason, collected)
@@ -59,6 +60,7 @@ Collector class for limited event use
 > |-----------|-------------|
 > | reason | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)<br>The reason the collector has ended with |
 > | collected | [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)<[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String), [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)> |
+
 > Returns unknown
 
 ### onRun?(...args)
@@ -67,6 +69,7 @@ Collector class for limited event use
 > | Parameter | Description |
 > |-----------|-------------|
 > | args | [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)[]<br>The arguments of the event |
+
 > Returns unknown
 
 ### run(...args)
@@ -74,7 +77,7 @@ Collector class for limited event use
 > | Parameter | Description                                                                                         |
 > | --------- | --------------------------------------------------------------------------------------------------- |
 > | args      | [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)[] |
->
+
 > Returns [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
 ### cancelRun(value)
@@ -82,12 +85,13 @@ Collector class for limited event use
 > | Parameter | Description                                                                                       |
 > | --------- | ------------------------------------------------------------------------------------------------- |
 > | value     | [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) |
->
+
 > Returns [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)>
 
 ### start()
 
 > Start the collector<br>
+
 > Returns [this](Collector.md)
 
 ### collect(...args)
@@ -96,6 +100,7 @@ Collector class for limited event use
 > | Parameter | Description |
 > |-----------|-------------|
 > | args | [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)[]<br>The arguments of the event |
+
 > Returns [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 
 ### end(reason)
@@ -104,6 +109,7 @@ Collector class for limited event use
 > | Parameter | Description |
 > |-----------|-------------|
 > | reason | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)?<br>The reason to end the collector |
+
 > Returns unknown
 
 ### clearTimeout()
@@ -121,4 +127,5 @@ Collector class for limited event use
 ### checkEnd()
 
 > Check that the collector has not finished<br>
+
 > Returns [Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)

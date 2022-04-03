@@ -62,6 +62,7 @@ EmbedConstructor to create embeds easily.
 > | Parameter | Description |
 > |-----------|-------------|
 > | title | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)<br>The new title of the embed |
+
 > Returns [this](embed.md)
 
 ### setDescription(description)
@@ -70,6 +71,7 @@ EmbedConstructor to create embeds easily.
 > | Parameter | Description |
 > |-----------|-------------|
 > | description | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)<br>The new description of the embed |
+
 > Returns [this](embed.md)
 
 ### setURL(url)
@@ -78,6 +80,7 @@ EmbedConstructor to create embeds easily.
 > | Parameter | Description |
 > |-----------|-------------|
 > | url | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)<br>The new URL of the title |
+
 > Returns [this](embed.md)
 
 ### setTimestamp(timestamp)
@@ -86,6 +89,7 @@ EmbedConstructor to create embeds easily.
 > | Parameter | Description |
 > |-----------|-------------|
 > | timestamp | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) \| [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) \| [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)<br>The new timestamp of the embed |
+
 > Returns [this](embed.md)
 
 ### setColor(color)
@@ -96,6 +100,7 @@ EmbedConstructor to create embeds easily.
 > | color | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) \| [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)<br>The new color of the embed |
 > | g | [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) (optional) |
 > | b | [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) (optional) |
+
 > Returns [this](embed.md)
 
 ### setFooter(footer, iconURL)
@@ -107,6 +112,7 @@ EmbedConstructor to create embeds easily.
 > | footer.text | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)<br>The footer text |
 > | footer.icon_url | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) (optional)<br>The icon URL of the new footer |
 > | iconURL | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) (optional)<br>The URL of the new footer icon
+
 > Returns [this](embed.md)
 
 ### setImage(image)
@@ -116,6 +122,7 @@ EmbedConstructor to create embeds easily.
 > |-----------|-------------|
 > | image | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) \| [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)<br>The new image of the embed |
 > | image.url | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) (optional)<br>The url of the new embed image |
+
 > Returns [this](embed.md)
 
 ### setThumbnail(thumbnail)
@@ -125,6 +132,7 @@ EmbedConstructor to create embeds easily.
 > |-----------|-------------|
 > | thumbnail | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) \| [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)<br>The new thumbnail of the embed |
 > | thumbnail.url | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) (optional)<br>The url of the new embed thumbnail |
+
 > Returns [this](embed.md)
 
 ### setAuthor(author, iconURL, url)
@@ -138,6 +146,7 @@ EmbedConstructor to create embeds easily.
 > | author.url | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) (optional)<br>The url of the author |
 > | iconURL | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) (optional)<br>The icon url of the author |
 > | url | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) (optional)<br>The url of the author |
+
 > Returns [this](embed.md)
 
 ### setFields(fields)
@@ -149,6 +158,7 @@ EmbedConstructor to create embeds easily.
 > | fields[].name | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)<br>The name of the field |
 > | fields[].value | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)<br>The value of the field |
 > | fields[].inline | [Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) (optional) |
+
 > Returns [this](embed.md)
 
 ### addField(field, value, inline)
@@ -162,6 +172,7 @@ EmbedConstructor to create embeds easily.
 > | field.inline | [Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) (optional) |
 > | value | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) (optional)<br>The value of the field |
 > | inline | [Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) (optional) |
+
 > Returns [this](embed.md)
 
 ### addFields(...fields)
@@ -173,6 +184,7 @@ EmbedConstructor to create embeds easily.
 > | fields[].name | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)<br>The name of the field |
 > | fields[].value | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)<br>The value of the field |
 > | fields[].inline | [Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) (optional) |
+
 > Returns [this](embed.md)
 
 ### toJSON()

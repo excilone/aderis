@@ -30,6 +30,7 @@ Collector manager for messages and components.
 > | Parameter | Description |
 > |-----------|-------------|
 > | collector | [Collector](./Collector.md)|
+
 > Returns [Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)<[Collector](./Collector.md)>
 
 ### removeCollector(collector)
@@ -38,4 +39,5 @@ Collector manager for messages and components.
 > | Parameter | Description |
 > |-----------|-------------|
 > | collector | [Collector](./Collector.md)|
+
 > Returns [Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
