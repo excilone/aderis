@@ -24,6 +24,7 @@ import type {
 } from '../typings';
 import { loadImport, loadProperty } from '../loaders';
 import { checkType, CollectorEvents, isTextableChannel } from '../utils';
+import { Collection, List } from '@excilone/collection';
 
 // if MESSAGE_COMPONENT is changed
 const MESSAGE_COMPONENT_TYPE: Constants['InteractionTypes']['MESSAGE_COMPONENT'] = 3;
@@ -33,8 +34,7 @@ class Collector<E extends keyof CollectorClientEvents> implements CollectorData<
 	idle: boolean;
 	max?: number;
 	timeout?: number;
-	// TODO: use @excilone/collection instead of Map
-	collected: Map<string, CollectorClientEvents[E][0]> = new Map();
+	collected: Collection<string, CollectorClientEvents[E][0]> = new Collection();
 	data: CollectorRequired;
 	ended = false;
 	received = 0;
@@ -133,7 +133,7 @@ class Collector<E extends keyof CollectorClientEvents> implements CollectorData<
 	}
 	reset() {
 		this.end('reset');
-		this.collected = new Map();
+		this.collected = new Collection();
 		this.received = 0;
 		this.start();
 	}
@@ -153,8 +153,7 @@ class Collector<E extends keyof CollectorClientEvents> implements CollectorData<
 }
 
 class CollectorManager {
-	// TODO: @excilone/collection List instead of Set
-	list: Set<Collector<keyof CollectorClientEvents>> = new Set();
+	list: List<Collector<keyof CollectorClientEvents>> = new List();
 	client: Client;
 	constructor(client: Client) {
 		this.client = client;

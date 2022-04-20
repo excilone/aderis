@@ -1,3 +1,4 @@
+import type { Collection as ExciloneCollection, List } from '@excilone/collection';
 import 'eris';
 
 declare module 'eris' {
@@ -111,16 +112,14 @@ declare module 'eris' {
 		idle: boolean;
 		max?: number;
 		timeout?: number;
-		// TODO: use @excilone/collection instead of Map
-		collected: Map<string, CollectorClientEvents[E][0]>;
+		collected: ExciloneCollection<string, CollectorClientEvents[E][0]>;
 		data: E extends 'interactionCreate' ? CollectorRequired : BaseCollectorRequired;
 		ended: boolean;
 		received: number;
 		filter?(...args: CollectorClientEvents[E]): boolean | Promise<boolean>;
-		// TODO: use @excilone/collection instead of Map
 		onEnd?(
 			reason: string,
-			collected: Map<string, CollectorClientEvents[E][0]>
+			collected: ExciloneCollection<string, CollectorClientEvents[E][0]>
 		): unknown | Promise<unknown>;
 		onRun?(...args: CollectorClientEvents[E]): unknown | Promise<unknown>;
 		run(...args: ClientEvents[E]): Promise<void>;
@@ -135,8 +134,7 @@ declare module 'eris' {
 		checkEnd(): boolean;
 	}
 	export class CollectorManager {
-		// TODO: replace any with Collector
-		list: Set<Collector<keyof CollectorClientEvents>>;
+		list: List<Collector<keyof CollectorClientEvents>>;
 		client: Client;
 		constructor(client: Client);
 		addCollector(collector: Collector<keyof CollectorClientEvents>): this['list'];
@@ -158,10 +156,9 @@ declare module 'eris' {
 		maxReceived?: boolean;
 		filter?(...args: CollectorClientEvents[E]): boolean | Promise<boolean>;
 		onRun?(...args: CollectorClientEvents[E]): unknown | Promise<unknown>;
-		// TODO: use @excilone/collection instead of Map
 		onEnd?(
 			reason: string,
-			collected: Map<string, CollectorClientEvents[E][0]>
+			collected: ExciloneCollection<string, CollectorClientEvents[E][0]>
 		): unknown | Promise<unknown>;
 		timeout?: number;
 		idle?: boolean;

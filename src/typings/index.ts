@@ -9,6 +9,7 @@ import type {
 	Message,
 	PossiblyUncachedTextableChannel
 } from 'eris';
+import type { Collection } from '@excilone/collection';
 
 export type ErisClasses = Pick<
 	typeof import('eris'),
@@ -69,8 +70,7 @@ export interface CollectorOptions<E extends keyof CollectorClientEvents> {
 	onRun?(...args: CollectorClientEvents[E]): unknown | Promise<unknown>;
 	onEnd?(
 		reason: string,
-		// TODO: use @excilone/collection instead of Map
-		collected: Map<string, ClientEvents[E][0]>
+		collected: Collection<string, ClientEvents[E][0]>
 	): unknown | Promise<unknown>;
 	timeout?: number;
 	idle?: boolean;
