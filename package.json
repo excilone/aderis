@@ -1,7 +1,7 @@
 {
 	"name": "@excilone/aderis",
 	"description": "Adds new methods and properties to the Eris library",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"main": "dist/index.js",
 	"types": "./index.d.ts",
 	"files": [
@@ -15,10 +15,12 @@
 		},
 		"./config": {
 			"require": "./dist/config.js",
+			"import": "./dist/config.js",
 			"types": "./dist/config.d.ts"
 		},
 		"./config.js": {
 			"require": "./dist/config.js",
+			"import": "./dist/config.js",
 			"types": "./dist/config.d.ts"
 		}
 	},
