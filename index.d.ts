@@ -3,7 +3,7 @@ import 'eris';
 
 declare module 'eris' {
 	/* Embed */
-	export class EmbedConstructor implements EmbedOptions {
+	export class MessageEmbed implements EmbedOptions {
 		constructor(data?: EmbedOptions);
 		author?: EmbedAuthorOptions;
 		color?: number;

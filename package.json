@@ -1,7 +1,7 @@
 {
 	"name": "@excilone/aderis",
 	"description": "Adds new methods and properties to the Eris library",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"main": "dist/index.js",
 	"types": "./index.d.ts",
 	"files": [
@@ -27,7 +27,7 @@
 	"license": "Apache-2.0",
 	"dependencies": {
 		"@excilone/collection": "^0.0.2",
-		"eris": "^0.16.1"
+		"eris": "^0.17.1"
 	},
 	"devDependencies": {
 		"@types/node": "^17.0.23",
@@ -51,7 +51,7 @@
 	"author": {
 		"name": "cr1xto"
 	},
-	"packageManager": "yarn@1.22.15",
+	"packageManager": "yarn@1.22.19",
 	"keywords": [
 		"discord",
 		"excilone",

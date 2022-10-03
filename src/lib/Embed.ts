@@ -2,7 +2,7 @@ import type Eris from 'eris';
 import { loadImport } from '../loaders';
 import { checkType, randomHexColor } from '../utils';
 
-class EmbedConstructor implements Eris.EmbedOptions {
+class MessageEmbed implements Eris.EmbedOptions {
 	author?: Eris.EmbedAuthorOptions;
 	color?: number;
 	description?: string;
@@ -19,7 +19,7 @@ class EmbedConstructor implements Eris.EmbedOptions {
 
 	setTitle(title: string): this {
 		this.title = checkType(title, 'STRING', {
-			maxLength: EmbedConstructor.MAX_TITLE_LENGTH
+			maxLength: MessageEmbed.MAX_TITLE_LENGTH
 		});
 		if (this.title!.length < 1) this.title = undefined;
 		return this;
@@ -27,7 +27,7 @@ class EmbedConstructor implements Eris.EmbedOptions {
 
 	setDescription(description: string): this {
 		this.description = checkType(description, 'STRING', {
-			maxLength: EmbedConstructor.MAX_DESCRIPTION_LENGTH
+			maxLength: MessageEmbed.MAX_DESCRIPTION_LENGTH
 		});
 		if (this.description!.length < 1) this.description = undefined;
 		return this;
@@ -85,13 +85,13 @@ class EmbedConstructor implements Eris.EmbedOptions {
 			typeof footer === 'string'
 				? {
 						text: checkType(footer, 'STRING', {
-							maxLength: EmbedConstructor.MAX_FOOTER_TEXT_LENGTH
+							maxLength: MessageEmbed.MAX_FOOTER_TEXT_LENGTH
 						}),
 						icon_url: iconURL ?? this.footer?.icon_url
 				  }
 				: {
 						text: checkType(footer.text, 'STRING', {
-							maxLength: EmbedConstructor.MAX_FOOTER_TEXT_LENGTH
+							maxLength: MessageEmbed.MAX_FOOTER_TEXT_LENGTH
 						}),
 						icon_url: footer.icon_url ?? this.footer?.icon_url
 				  };
@@ -118,14 +118,14 @@ class EmbedConstructor implements Eris.EmbedOptions {
 			typeof author === 'string'
 				? {
 						name: checkType(author, 'STRING', {
-							maxLength: EmbedConstructor.MAX_AUTHOR_NAME_LENGTH
+							maxLength: MessageEmbed.MAX_AUTHOR_NAME_LENGTH
 						}),
 						icon_url,
 						url
 				  }
 				: {
 						name: checkType(author.name, 'STRING', {
-							maxLength: EmbedConstructor.MAX_AUTHOR_NAME_LENGTH
+							maxLength: MessageEmbed.MAX_AUTHOR_NAME_LENGTH
 						}),
 						icon_url: author.icon_url ?? this.author?.icon_url,
 						url: author.url ?? this.author?.url
@@ -174,10 +174,10 @@ class EmbedConstructor implements Eris.EmbedOptions {
 				.map((field) => {
 					return {
 						name: checkType(field.name, 'STRING', {
-							maxLength: EmbedConstructor.MAX_FIELD_NAME_LENGTH
+							maxLength: MessageEmbed.MAX_FIELD_NAME_LENGTH
 						}),
 						value: checkType(field.name, 'STRING', {
-							maxLength: EmbedConstructor.MAX_FIELD_VALUE_LENGTH
+							maxLength: MessageEmbed.MAX_FIELD_VALUE_LENGTH
 						}),
 						inline: field.inline
 					};
@@ -200,5 +200,5 @@ class EmbedConstructor implements Eris.EmbedOptions {
 }
 
 export = (Eris: typeof import('eris')) => {
-	loadImport(Eris, EmbedConstructor);
+	loadImport(Eris, MessageEmbed);
 };
