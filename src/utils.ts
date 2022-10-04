@@ -1,5 +1,5 @@
-import type { Channel, TextableChannel, TextChannelTypes } from 'eris';
-import type { CheckStringData, CheckNumberData } from './typings';
+import type { Channel, TextableChannel, TextChannelTypes, TextVoiceChannelTypes } from 'eris';
+import type { CheckNumberData, CheckStringData } from './typings';
 
 export function checkType(value: string, type: 'STRING', data?: CheckStringData): string;
 export function checkType(value: number, type: 'NUMBER', data?: CheckNumberData): number;
@@ -51,6 +51,6 @@ export function randomHexColor(): number {
 export const CollectorEvents = ['interactionCreate', 'messageCreate'];
 
 export function isTextableChannel(channel: Channel): channel is TextableChannel {
-	const channelTypes: TextChannelTypes[] = [0, 5, 1, 3];
+	const channelTypes: (TextChannelTypes | TextVoiceChannelTypes)[] = [0, 5, 1, 3, 2, 13];
 	return (channelTypes as number[]).includes(channel?.type);
 }

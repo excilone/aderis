@@ -1,30 +1,30 @@
+import { Collection, List } from '@excilone/collection';
 import type {
-	Client,
-	ClientEvents,
-	ComponentInteraction,
-	Message,
-	PossiblyUncachedTextableChannel,
-	Constants,
 	AnyChannel,
 	AnyThreadChannel,
+	AutocompleteInteraction,
+	Client,
+	ClientEvents,
+	CommandInteraction,
+	ComponentInteraction,
+	Constants,
+	Message,
+	PingInteraction,
 	PossiblyUncachedGuild,
 	PossiblyUncachedMessage,
-	PingInteraction,
-	CommandInteraction,
-	AutocompleteInteraction,
-	UnknownInteraction,
-	TextableChannel
+	PossiblyUncachedTextableChannel,
+	TextableChannel,
+	UnknownInteraction
 } from 'eris';
-import type {
-	CollectorData,
-	CollectorClientEvents,
-	CollectorRequired,
-	CollectorClientValues,
-	CollectorOptions
-} from '../typings';
 import { loadImport, loadProperty } from '../loaders';
+import type {
+	CollectorClientEvents,
+	CollectorClientValues,
+	CollectorData,
+	CollectorOptions,
+	CollectorRequired
+} from '../typings';
 import { checkType, CollectorEvents, isTextableChannel } from '../utils';
-import { Collection, List } from '@excilone/collection';
 
 // if MESSAGE_COMPONENT is changed
 const MESSAGE_COMPONENT_TYPE: Constants['InteractionTypes']['MESSAGE_COMPONENT'] = 3;
@@ -260,6 +260,7 @@ export = (Eris: typeof import('eris')) => {
 	loadProperty(Eris, 'PrivateChannel', createMessageCollector);
 	loadProperty(Eris, 'TextChannel', createMessageCollector);
 	loadProperty(Eris, 'ThreadChannel', createMessageCollector);
+	loadProperty(Eris, 'TextVoiceChannel', createMessageCollector);
 	loadProperty(
 		Eris,
 		'Client',

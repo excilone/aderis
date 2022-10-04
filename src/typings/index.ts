@@ -1,15 +1,15 @@
+import type { Collection } from '@excilone/collection';
 import type {
-	PingInteraction,
-	CommandInteraction,
 	AutocompleteInteraction,
-	UnknownInteraction,
 	Client,
 	ClientEvents,
+	CommandInteraction,
 	ComponentInteraction,
 	Message,
-	PossiblyUncachedTextableChannel
+	PingInteraction,
+	PossiblyUncachedTextableChannel,
+	UnknownInteraction
 } from 'eris';
-import type { Collection } from '@excilone/collection';
 
 export type ErisClasses = Pick<
 	typeof import('eris'),
@@ -42,6 +42,7 @@ export type ErisClasses = Pick<
 	| 'UnknownInteraction'
 	| 'User'
 	| 'VoiceChannel'
+	| 'TextVoiceChannel'
 >;
 
 export interface CheckStringData {

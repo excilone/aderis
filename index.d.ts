@@ -203,6 +203,11 @@ declare module 'eris' {
 			options?: CollectorOptions<'messageCreate'>
 		): Collector<'messageCreate'>;
 	}
+	export interface TextVoiceChannel {
+		createMessageCollector(
+			options?: CollectorOptions<'messageCreate'>
+		): Collector<'messageCreate'>;
+	}
 	export interface Message {
 		createComponentCollector(
 			options?: CollectorOptions<'interactionCreate'>
