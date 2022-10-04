@@ -31,3 +31,7 @@ import '@excilone/aderis/config';
 -   [User](./docs/user.md)
 -   [Member](./docs/member.md)
 -   [Role](./docs/role.md)
+
+## License
+
+This project is licensed under the Apache License, Version 2.0.
