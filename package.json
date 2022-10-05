@@ -1,7 +1,7 @@
 {
 	"name": "@excilone/aderis",
 	"description": "Adds new methods and properties to the Eris library",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"main": "dist/index.js",
 	"types": "./index.d.ts",
 	"files": [
@@ -16,12 +16,12 @@
 		"./config": {
 			"require": "./dist/config.js",
 			"import": "./dist/config.js",
-			"types": "./config.d.ts"
+			"types": "./index.d.ts"
 		},
 		"./config.js": {
 			"require": "./dist/config.js",
 			"import": "./dist/config.js",
-			"types": "./config.d.ts"
+			"types": "./index.d.ts"
 		}
 	},
 	"license": "Apache-2.0",
