@@ -1,12 +1,12 @@
 {
 	"name": "@excilone/aderis",
 	"description": "Adds new methods and properties to the Eris library",
-	"version": "0.0.8",
+	"version": "0.1.0",
 	"main": "dist/index.js",
 	"types": "./index.d.ts",
 	"files": [
 		"dist/**/*",
-		"index.d.ts"
+		"*.d.ts"
 	],
 	"exports": {
 		".": {
@@ -16,12 +16,12 @@
 		"./config": {
 			"require": "./dist/config.js",
 			"import": "./dist/config.js",
-			"types": "./dist/config.d.ts"
+			"types": "./config.d.ts"
 		},
 		"./config.js": {
 			"require": "./dist/config.js",
 			"import": "./dist/config.js",
-			"types": "./dist/config.d.ts"
+			"types": "./config.d.ts"
 		}
 	},
 	"license": "Apache-2.0",
@@ -43,6 +43,7 @@
 	"scripts": {
 		"build": "tsc -p .",
 		"test": "node index.test.js",
+		"test-esm": "node index.test.mjs",
 		"lint": "eslint .",
 		"lint-fix": "eslint . --fix",
 		"format": "prettier --write .",
