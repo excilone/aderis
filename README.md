@@ -6,7 +6,7 @@ Adds new methods and properties to the [Eris](https://www.npmjs.com/package/eris
 
 ## Installation
 
-[Eris](https://www.npmjs.com/package/eris) v0.17.1 is required.
+[Eris](https://www.npmjs.com/package/eris) v0.17.2 is required.
 
 ```sh
 $ npm install @excilone/aderis
@@ -31,6 +31,7 @@ import '@excilone/aderis';
 -   [User](./docs/user.md)
 -   [Member](./docs/member.md)
 -   [Role](./docs/role.md)
+-   [CommandInteraction](./docs/command-interaction.md)
 
 ## License
 
