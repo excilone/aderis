@@ -42,7 +42,7 @@
 		"prepublishOnly": "yarn format && yarn lint && yarn build"
 	},
 	"author": {
-		"name": "cr1xto"
+		"name": "sabier"
 	},
 	"packageManager": "yarn@1.22.19",
 	"keywords": [
