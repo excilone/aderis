@@ -11,6 +11,6 @@
 		"allowSyntheticDefaultImports": true,
 		"strictNullChecks": true
 	},
-	"include": ["./src", "index.d.ts", "config.d.ts"],
+	"include": ["./src", "index.d.ts"],
 	"exclude": ["node_modules"]
 }
