@@ -214,6 +214,9 @@ declare module 'eris' {
 		): Collector<'interactionCreate'>;
 	}
 
+	/* CommandInteraction Implementations */
+	export type InteractionContentEphemeral = Omit<InteractionContent, 'flags'>;
+
 	/* Member */
 	export interface Member {
 		roleCollection: Collection<Role>;
@@ -244,6 +247,19 @@ declare module 'eris' {
 			file?: FileContent | FileContent[]
 		): Promise<Message<PrivateChannel>>;
 		tag: string;
+	}
+
+	/* CommandInteraction */
+	export interface CommandInteraction {
+		deferEphemeral(): Promise<void>;
+		createEphemeralFollowup(
+			content: string | InteractionContentEphemeral,
+			file?: FileContent | FileContent[]
+		): Promise<Message<TextableChannel>>;
+		createEphemeralMessage(
+			content: string | InteractionContent,
+			file?: FileContent | FileContent[]
+		): Promise<void>;
 	}
 }
 
