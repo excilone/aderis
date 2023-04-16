@@ -1,4 +1,4 @@
-import type { Member, Role, MessageContent, FileContent } from 'eris';
+import type { FileContent, Member, MessageContent, Role } from 'eris';
 import { loadProperty } from '../loaders';
 
 export = (Eris: typeof import('eris')) => {
@@ -47,6 +47,26 @@ export = (Eris: typeof import('eris')) => {
 			file?: FileContent | FileContent[]
 		) {
 			return this.user.send(content, file);
+		}
+	);
+	loadProperty(
+		Eris,
+		'Member',
+		function timeout(this: Member, timeout: number | null, reason?: string) {
+			return this.edit(
+				{
+					communicationDisabledUntil:
+						timeout !== null ? new Date(Date.now() + timeout) : null
+				},
+				reason
+			);
+		}
+	);
+	loadProperty(
+		Eris,
+		'Member',
+		function setNickname(this: Member, nick: string | null, reason?: string) {
+			return this.edit({ nick }, reason);
 		}
 	);
 };

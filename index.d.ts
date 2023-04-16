@@ -230,6 +230,8 @@ declare module 'eris' {
 			content: MessageContent,
 			file?: FileContent | FileContent[]
 		): Promise<Message<PrivateChannel>>;
+		timeout(timeout: number | null, reason?: string): Promise<void>;
+		setNickname(nick: string | null, reason?: string): Promise<void>;
 	}
 
 	/* Role */
