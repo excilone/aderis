@@ -7,12 +7,12 @@
 	"Method snippet for documentation": {
 		"prefix": "method",
 		"body": [
-			"### name()",
+			"### $1($2)",
 			"",
-			"> ",
+			"> $3",
 			"> | Parameter | Description |",
 			"> |-----------|-------------|",
-			"> |  |  |"
+			"> | $4 | $5 |"
 		],
 		"description": "Method snippet for documentation"
 	},
@@ -21,7 +21,7 @@
 		"body": [
 			"## Constructor",
 			"",
-			"`new name()`",
+			"`new $1($2)`",
 			"> | Parameter | Default | Description |",
 			"> |-----------|---------|-------------|"
 		],
