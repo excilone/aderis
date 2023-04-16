@@ -6,22 +6,13 @@
 	"types": "./index.d.ts",
 	"files": [
 		"dist/**/*",
-		"*.d.ts"
+		"*.d.ts",
+		"esm.mjs"
 	],
 	"exports": {
 		".": {
 			"require": "./dist/index.js",
-			"import": "./dist/config.js",
-			"types": "./index.d.ts"
-		},
-		"./config": {
-			"require": "./dist/config.js",
-			"import": "./dist/config.js",
-			"types": "./index.d.ts"
-		},
-		"./config.js": {
-			"require": "./dist/config.js",
-			"import": "./dist/config.js",
+			"import": "./esm.mjs",
 			"types": "./index.d.ts"
 		}
 	},
