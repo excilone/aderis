@@ -5,6 +5,7 @@ import type {
 	ClientEvents,
 	CommandInteraction,
 	ComponentInteraction,
+	InteractionContent,
 	Message,
 	PingInteraction,
 	PossiblyUncachedTextableChannel,
@@ -97,3 +98,5 @@ export type CollectorClientValues =
 	| ComponentInteraction
 	| AutocompleteInteraction
 	| UnknownInteraction;
+
+export type InteractionContentEphemeral = Omit<InteractionContent, 'flags'>;
