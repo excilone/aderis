@@ -235,6 +235,38 @@ declare module 'eris' {
 	/* Role */
 	export interface Role {
 		hexColor: string;
+		/**
+		 * Edit the role color
+		 * @param hex The hex color of the role, in number form
+		 * @param reason The reason to be displayed in audit logs
+		 * @example
+		 * role.setColor(0x3DA5B3)
+		 */
+		setColor(hex: number, reason?: string): Promise<Role>;
+		/**
+		 * Edit the role color
+		 * @param color The color of the role, in rgb form
+		 * @param reason The reason to be displayed in audit logs
+		 * @example
+		 * role.setColor([61, 165, 179])
+		 */
+		setColor(color: [r: number, g: number, b: number], reason?: string): Promise<Role>;
+		/**
+		 * Edit the role color
+		 * @param color The color of the role
+		 * @param reason The reason to be displayed in audit logs
+		 * @example
+		 * role.setColor('RANDOM')
+		 */
+		setColor(color: 'RANDOM', reason?: string): Promise<Role>;
+		/**
+		 * Edit the role color
+		 * @param hexString The color of the role, in string form
+		 * @param reason The reason to be displayed in audit logs
+		 * @example
+		 * role.setColor('#3DA5B3')
+		 */
+		setColor(hexString: `#${string}`, reason?: string): Promise<Role>;
 	}
 
 	/* User */
